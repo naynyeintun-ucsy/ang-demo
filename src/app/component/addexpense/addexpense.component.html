@@ -1,0 +1,16 @@
+  <div class="container-fluid mt-5">
+
+ <form  class="form" (ngSubmit)="saveExpense()" #from="ngForm">
+
+    <input class="form-control" type="text" placeholder="Enter expense " name="expense" [(ngModel)]="expense.expends">
+    <br>
+    <input class="form-control" type="text" placeholder="Enter Amount " name="amount" [(ngModel)]="expense.amount">
+    <br>
+    <textarea class="form-control" type="text" placeholder="Enter description " name="description" [(ngModel)]="expense.description">
+        </textarea>
+    <br>
+    <button class="btn btn-primary" type="submit" >{{buttonText}}</button>
+</form>
+
+</div>
+     

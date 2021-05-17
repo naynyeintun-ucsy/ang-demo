@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+<div class="card card-sm mt-2" *ngFor="let expense of expenses" >
+    <div class="card-body  bg-light  w-100">
+        <div class="row  p-5">
+            <div class="col-10">
+                <h3>{{expense.expends}}</h3>
+                <p>{{expense.amount | currency :'USD'}}</p>
+                <p>{{expense.description}}</p>
+            </div>
+            <div class="col-2 ">
+                <button (click)="clickDeleteButton(expense.id)" class="btn btn-danger mb-3">
+                    Delete
+                </button><br>
+                <button (click)="clickEditButton(expense.id)" class="btn btn-success">
+                    Edit
+                </button>
+
+            </div>
+        </div>
+</div>
+</div> 
+</div>
+

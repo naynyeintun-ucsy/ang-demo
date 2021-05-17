@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+.img-logo {
+    height: 60px;
+
+}
+
+.card-img-cust{
+    height: 200px;
+}
+
+.nav-bg {
+    background: linear-gradient(45deg, #ef9813, #f64e4e);
+
+}
+
+.profile-logo{
+    height:25px;
+    width:25px;
+    position: relative;
+}
+
+.online-noti{
+    top : 45%;
+    right: 18%;
+    font-size: 0.5em;
+    text-overline-color: white;
+    color : #84b31b;
+    position: absolute;
+
+}
+
+body{
+  /* background: linear-gradient(45deg, #ef9813, #f64e4e);  */ 
+ 
+
+}
+
+.ed-bg {
+    color : blueviolet;
+    margin-top: 3px;
+    font-size: 5.0em;
+}
+
+.del-bg {
+    color : red;
+    margin-top: 3px;
+    font-size: 7.0em;
+   
+}
+
+
+.nav-left{
+    position: fixed;
+    margin-left: auto;
+}
+
+.footer {
+    position: fixed;
+
+}
+.main-div {
+    margin-left: auto;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ef9813, #f64e4e); 
+   
+    color:white;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    border: 0px solid green;
+    padding-top: 10px;
+  }
+
+
+  .center-footer {
+    margin: auto;
+    width: 30%;
+    border: 0px solid green;
+    padding-top: 10px;
+  }
+
+
+
+.block-img {
+    height: 150px ;
+     width: 200px;
+      background:red
+}
+  
+
+
+/* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.blink-image {
+    -moz-animation: blink normal 1s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 1s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 1s infinite ease-in-out; /* IE */
+     animation: blink normal 1s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}   
+
+
+body {
+    background : linear-gradient(45deg , green , blueviolet);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
