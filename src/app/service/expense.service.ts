@@ -9,7 +9,8 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ExpenseService {
-  private baseUrl : string = 'https://nnt-expense-springboot.herokuapp.com/fs/'
+  private baseUrl : string = 'http://localhost:9098/fs/'
+  //private baseUrl : string = 'https://nnt-expense-springboot.herokuapp.com/fs/'
   private getUrl: string =  this.baseUrl+'expends';
   private postUrl: string = this.baseUrl+'expend';
 

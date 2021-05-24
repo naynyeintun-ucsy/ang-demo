@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Component, OnInit } from '@angular/core'
 import { Employee } from '../../model/employee';
 import { EmployeeService } from '../../service/employee.service';
-import {NgForm} from "@angular/forms"
+import {MatDialog , MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
+import { EmpDialogComponent } from './emp-dialog/emp-dialog.component';
 
 
 @Component({
@@ -12,7 +12,7 @@ import {NgForm} from "@angular/forms"
 })
 export class EmployeeComponent implements OnInit {
 
-  
+  employee : Employee;
   employees : Employee [] =[];
   firstName : any; 
   key : string = 'id';
@@ -21,14 +21,12 @@ export class EmployeeComponent implements OnInit {
   
   confirmDeletEmpId : number  = 1;
 
-  constructor(private employeeService : EmployeeService ) { }
+  constructor(private employeeService : EmployeeService , public dialog: MatDialog ) { }
 
   ngOnInit(): void {
 
-    this.employeeService.getEmployeeList().subscribe(
-      response => this.employees = response 
-    )
-    }
+    this.fetchEmployee()
+  }
 
     sort(key:string){
         this.key=key;
@@ -64,11 +62,42 @@ export class EmployeeComponent implements OnInit {
       )  
     }
 
+    fetchEmployee()
+    {
+      this.employeeService.getEmployeeList().subscribe(
+        response => this.employees = response 
+      )
+      
+    }
+
     
 
     onEdit(id : number){
       console.log("click the edit button" , id  );
-      
+      this.employeeService.findById(id).subscribe( data =>{
+        console.log("data on api  call is ",data)
+        this.employee=data
+        this.openDialog()
+      });
+    
     }
+
+    openDialog(): void {
+      console.log("open dialog data", this.employee)
+      const dialogRef = this.dialog.open(EmpDialogComponent, {
+        width: 'auto',
+        height: 'auto',
+        data : this.employee
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.employee = result
+        this.fetchEmployee()
+      });
+    }
+
+
+
 
 }

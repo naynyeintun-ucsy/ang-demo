@@ -152,7 +152,7 @@ body{
 
 
 body {
-    background : linear-gradient(45deg , green , blueviolet);
+    background : linear-gradient( 90deg, rgb(193, 207, 193) ,rgb(183, 197, 183))
 }
 
 html, body { height: 100%; }
