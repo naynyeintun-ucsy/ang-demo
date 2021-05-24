@@ -8,7 +8,7 @@ import { Employee } from '../model/employee';
 })
 export class EmployeeService {
 
-  baseUrl = 'http://nnt-expense-springboot.herokuapp.com/fs/'
+  baseUrl = 'https://nnt-expense-springboot.herokuapp.com/fs/'
 
   constructor(private http : HttpClient) { }
 
