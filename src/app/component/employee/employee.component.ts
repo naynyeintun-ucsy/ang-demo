@@ -78,6 +78,7 @@ export class EmployeeComponent implements OnInit {
         console.log("data on api  call is ",data)
         this.employee=data
         this.openDialog()
+        this.fetchEmployee()
       });
     
     }
